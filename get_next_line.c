@@ -6,7 +6,7 @@
 /*   By: plavaux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 17:23:59 by plavaux           #+#    #+#             */
-/*   Updated: 2015/01/14 14:34:55 by plavaux          ###   ########.fr       */
+/*   Updated: 2015/02/03 17:21:46 by plavaux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int				get_next_line(int const fd, char **line)
 		return (-1);
 	if (!pos[fd])
 		pos[fd] = ft_strnew(1);
-	status = reader(fd, buffer, &(*pos));
+	status = reader(fd, buffer, pos);
 	if (status <= 0)
 	{
 		if (!status)
